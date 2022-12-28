@@ -20,7 +20,7 @@ function Particle() {
         },
         background: {
             color: {
-                value: "#0d47a1",
+                value: "#121212",
             },
         },
         // style: {
@@ -77,23 +77,23 @@ function Particle() {
                 value: 0.5,
             },
             shape: {
-                type: ["image","circle"],
+                type: ["circle"],
                 // "image": [
 	            //     {
 	            //         "src": images.jollyroger,
                 //         // "height": 30,
 	            //         // "width": 23
 	            //     },
-	            //     // {
-	            //     //     "src": "../assets/Knicks-logo.png",
-	            //     //     "height":20,
-	            //     //     "width": 20
-	            //     // },
-	            //     // {
-	            //     //     "src": "../assets/attack-on-titan.png",
-	            //     //     "height": 20,
-	            //     //     "width": 20
-	            //     // }
+	            // //     // {
+	            // //     //     "src": "../assets/Knicks-logo.png",
+	            // //     //     "height":20,
+	            // //     //     "width": 20
+	            // //     // },
+	            // //     // {
+	            // //     //     "src": "../assets/attack-on-titan.png",
+	            // //     //     "height": 20,
+	            // //     //     "width": 20
+	            // //     // }
 	            // ]
             },
             size: {

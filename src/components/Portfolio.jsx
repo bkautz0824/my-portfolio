@@ -4,7 +4,9 @@ import Particle from './Particle';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion'
 import '@fontsource/bangers'
+import NavBar from './NavBar'
 import {    
+  AboutMeContainer,
   PortfolioContainer, 
   HeaderContainer, 
   ProjectContainer,
@@ -62,14 +64,36 @@ const Contact = () => {
 
 const Projects = () => {
  
+
+  const spring = {
+    type: "spring",
+    damping: 100,
+    duration: 3
+    // stiffness: 100
+  }  
+
+
   return (
     <ProjectContainer 
-      initial={{ opacity:0}} 
-      whileInView={{ opacity:1}}>
+      initial={{ 
+        opacity:0,
+        // height: "500px",
+        width: 0,
+        // margin: 50,
+        // padding: 50
+        //  x: -2500,
+        //  y: 2500
+      }} 
+      whileInView={{ 
+        opacity:1,
+        height: "1200px",
+        width: "auto",
+        zIndex: 1
+      }}
+      transition={spring}>
       <motion.h2 
-        whileInView={{color: "gold"}} 
-        // initial={{x: -2500}} 
-        transition={{ duration: 2}}
+        whileInView={{color: "#90EE90"}} 
+        transition={{ duration: 7}}
       >
         Projects
       </motion.h2>
@@ -80,15 +104,23 @@ const Projects = () => {
 
           return(
             
-           <ProjectItem>
+           <ProjectItem
+           transition={spring}
+           initial={{
+            width: "0px"
+           }}
+            whileInView={{
+              width:"80%",
+            }}
+           >
             
               <ProjectImage 
                 src={require(`../${item.imgUrl}`)}
-                whileHover={{ scale:1.3}}
+                whileHover={{ }}
               />
             
               <ProjectItemText
-                 whileHover={{ scale:1.3}}  
+                 whileHover={{scale: 1.2}}  
               >
                 <motion.h1
                   // animate={{color: "white", x:0}} 
@@ -109,6 +141,17 @@ const Projects = () => {
 };
 
 
+const AboutMe = () => {
+
+
+  return(
+    <AboutMeContainer>
+
+    </AboutMeContainer>
+
+  )
+}
+
 
 const Portfolio = () => {
 
@@ -116,6 +159,7 @@ const Portfolio = () => {
 
   return (
     <PortfolioContainer>
+      <NavBar />
       <Header />
       <Projects />
       <Contact />
