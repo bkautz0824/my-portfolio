@@ -102,18 +102,18 @@ const Projects = () => {
 
   return (
     <ProjectContainer 
-      // initial={{ 
-      //   opacity:0,
+      initial={{ 
+        opacity:0,
       //   // height: "500px",
       //   width: "100px",
       //   // margin: 50,
       //   // padding: 50
-      //   zIndex: 0
+        zIndex: 0
 
-      // }} 
+      }} 
       whileInView={{ 
         opacity:1,
-        height: "1200px",
+        // height: "1200px",
         width: "auto",
         zIndex: 1
       }}
@@ -133,13 +133,13 @@ const Projects = () => {
           return(
             
            <ProjectItem
-           transition={spring}
-           initial={{
-            width: "0px"
-           }}
-            whileInView={{
-              width:"80%",
-            }}
+          //  transition={spring}
+          //  initial={{
+          //   width: "0px"
+          //  }}
+          //   whileInView={{
+          //     width:"80%",
+          //   }}
            >
             
               <ProjectImage 

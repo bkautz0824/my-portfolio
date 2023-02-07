@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export const PortfolioContainer = styled.div`
 width: 100%;
-height: 5000px;
+height: auto;
 text-align: center;
 display: flex;
 align-items: center;
@@ -22,7 +22,7 @@ flex-direction: column;
 display: flex;
 margin-top: 5rem;
 /* padding-top: 5rem; */
-margin-bottom: 1rem;
+margin-bottom: 3rem;
 padding-bottom: 1rem;
 z-index: 1;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -68,6 +68,7 @@ export const ContactContainer = styled(motion.div)`
 width: 20%;
 height: auto;
 justify-content: center;
+align-items: center;
 padding: 2rem 5rem;
 margin: .5rem;
 background-color: aliceblue;
