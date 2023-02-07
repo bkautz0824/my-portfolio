@@ -173,7 +173,7 @@ function ResumeDisplay() {
                 skills && frontEnd.map((item) => {
                     
                     return (
-                        <p key={item.id} style={{color: "black"}}>{item.skill}</p>
+                        <p key={item.id} style={{color: "white"}}>{item.skill}</p>
                     )
                 })
             }
@@ -185,7 +185,7 @@ function ResumeDisplay() {
                  skills && backEnd.map((item) => {
                     
                     return (
-                        <p key={item.id} style={{color: "black"}}>{item.skill}</p>
+                        <p key={item.id} style={{color: "white"}}>{item.skill}</p>
                     )
                 })
             }

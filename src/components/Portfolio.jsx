@@ -68,11 +68,12 @@ const Resume = () => {
   }
   return(
   <ResumeContainer>
-  <h2>Resume</h2>
+  {/* <h1>Resume</h1> */}
     <Button 
     onClick={toggleResume}
     variant="contained"
     color='success'
+    sx={{width:"50%"}}
     >
       Click to View Resume
     </Button>

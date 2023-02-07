@@ -71,7 +71,8 @@ justify-content: center;
 align-items: center;
 padding: 2rem 5rem;
 margin: .5rem;
-background-color: aliceblue;
+background-color: black;
+color: silver;
 z-index: 1;
 display: flex;
 flex-direction: column;
@@ -81,12 +82,15 @@ export const ResumeContainer = styled(motion.div)`
 width: 50%;
 height: auto;
 justify-content: center;
+align-items: center;
 padding: 2rem 2rem;
 margin: 2rem 0;
-background-color: aliceblue;
+background-color: black;
+color: silver;
 z-index: 1;
 display: flex;
 flex-direction: column;
+box-shadow: 2px;
 `
 
 export const BottomContainer1 = styled(motion.div)`
@@ -132,7 +136,7 @@ padding: 1rem 5rem;
 max-height: 400px;
 `
 export const ProjectItemText = styled(motion.div)`
-width: 50%;
+width: auto;
 height: 100%;
 `
 
