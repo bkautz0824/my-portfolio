@@ -1,6 +1,7 @@
 import React from 'react';
 import portfolio from '../data/portfolio.json';
-import Particle from './Particle';
+import { Document, Page } from 'react-pdf';
+import { Button } from '@mui/material'
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion'
 import '@fontsource/bangers'
@@ -10,31 +11,33 @@ import {
   PortfolioContainer, 
   HeaderContainer, 
   ProjectContainer,
-  ContactResumeContainer,
-  ContactContainer,
   ResumeContainer,
+  ContactContainer,
   ProjectItem,
   ProjectImage,
-  ProjectItemText
+  ProjectItemText,
+  BottomContainer1,
+  BottomContainer2
 } from '../styles/portfolio'
-
+import ResumeDisplay from './ResumeDisplay';
 
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <Particle/>
+      
       <motion.h1
         initial={{opacity:0}}
         animate={{opacity:1}} 
         transition={{ duration: 1.5}}
         whileHover={{ color:'white', borderBottom:'1px solid white'}}
       >Bennett Kautz</motion.h1>
+   
       <motion.p
         initial={{opacity:0}}
         animate={{opacity:1}} 
         transition={{ duration: 1.5, delay:1}}
-      >Frontend Developer</motion.p>
+      >Full Stack Developer</motion.p>
 
     </HeaderContainer>
   );
@@ -42,58 +45,83 @@ const Header = () => {
 
 const Contact = () => {
   return (
-    <ContactResumeContainer
+    <ContactContainer
       initial={{ opacity:0}} 
       whileInView={{ opacity:1}}>
-      <ContactContainer>
+      
         <h2>Contact</h2>
         <p>You can contact me by email at bennettkautz@gmail.com</p><br/>
         <SocialIcon url="https://www.linkedin.com/in/bennett-kautz-187241158/"/>
         <SocialIcon url="https://github.com/bkautz0824"/>
-      </ContactContainer>
+      
      
-      <ResumeContainer>
-      <h2>Resume</h2>
-      <p>
-        You can download a copy of my resume <a href="/resume">here</a>.
-      </p>
-    </ResumeContainer>
-    </ContactResumeContainer>
+     
+    </ContactContainer>
   )
 };
+
+const Resume = () => {
+  const [isClicked, setIsClicked] = React.useState(false)
+
+  const toggleResume = () => {
+    setIsClicked(!isClicked)
+  }
+  return(
+  <ResumeContainer>
+  <h2>Resume</h2>
+    <Button 
+    onClick={toggleResume}
+    variant="contained"
+    color='success'
+    >
+      Click to View Resume
+    </Button>
+  {isClicked ? 
+   (
+   <div>
+   <ResumeDisplay/>
+
+
+  </div>
+  )
+  
+  : null}
+</ResumeContainer>)
+}
 
 const Projects = () => {
  
 
   const spring = {
     type: "spring",
-    damping: 100,
-    duration: 3
+    damping: 80,
+    duration: 1
     // stiffness: 100
   }  
 
 
   return (
     <ProjectContainer 
-      initial={{ 
-        opacity:0,
-        // height: "500px",
-        width: 0,
-        // margin: 50,
-        // padding: 50
-        //  x: -2500,
-        //  y: 2500
-      }} 
+      // initial={{ 
+      //   opacity:0,
+      //   // height: "500px",
+      //   width: "100px",
+      //   // margin: 50,
+      //   // padding: 50
+      //   zIndex: 0
+
+      // }} 
       whileInView={{ 
         opacity:1,
         height: "1200px",
         width: "auto",
         zIndex: 1
       }}
-      transition={spring}>
+      transition={spring}
+      >
       <motion.h2 
-        whileInView={{color: "#90EE90"}} 
-        transition={{ duration: 7}}
+        // whileInView={{color: "#90EE90"}} 
+        // transition={{ duration: 7}}
       >
         Projects
       </motion.h2>
@@ -116,11 +144,17 @@ const Projects = () => {
             
               <ProjectImage 
                 src={require(`../${item.imgUrl}`)}
-                whileHover={{ }}
+                // transition={spring}
+                // initial={{
+                //  width: "0px"
+                // }}
+                //  whileInView={{
+                //    width:"80%",
+                //  }}
               />
             
               <ProjectItemText
-                 whileHover={{scale: 1.2}}  
+                
               >
                 <motion.h1
                   // animate={{color: "white", x:0}} 
@@ -128,7 +162,7 @@ const Projects = () => {
                   // transition={{  duration: 5}}
                 >{item.title}</motion.h1>
                 <p>{item.description}</p>
-                <SocialIcon url="https://github.com/bkautz0824"/>
+                <SocialIcon url={item.github} whileHover={{scale: 1.2}}  />
               </ProjectItemText>
             </ProjectItem>)
           })
@@ -159,10 +193,17 @@ const Portfolio = () => {
 
   return (
     <PortfolioContainer>
+      {/* <Particle/> */}
       <NavBar />
       <Header />
       <Projects />
-      <Contact />
+      <BottomContainer1>
+        <Resume />
+      </BottomContainer1>
+      <BottomContainer2>
+        <Contact /> 
+      </BottomContainer2>
+     
     </PortfolioContainer>
   );
 };

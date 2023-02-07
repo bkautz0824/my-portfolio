@@ -5,19 +5,22 @@
         "id": 1,
         "title": "Crypto Fees",
         "imgUrl": "assets/crypto-fees.jpg",
-        "description": "This web page displays the 24 hour revenue of fees for each of the major cryptocurrency's.  This table displays the 24 hour fee in dollar amount, the logo, the name and the ticker of each coin."
+        "description": "This web page displays the 24 hour revenue of fees for each of the major cryptocurrency's.  This table displays the 24 hour fee in dollar amount, the logo, the name and the ticker of each coin.",
+        "github": "https://github.com/bkautz0824/crypto-fees"
     },
     {  
         "id": 2,
-        "title": "Website 2",
-        "imgUrl": "assets/test.png",
-        "description": ["React", "CSS"]
+        "title": "Gear 5 Clothing",
+        "imgUrl": "assets/eCommerce.jpg",
+        "description": "Full Stack website.  Used MongoDB for database storage, Express/Node.js for backend, and React/Typescript for the frontend.",
+        "github": "https://github.com/bkautz0824/Gear-5-Clothing"
     },
     {
         "id": 3,
-        "title": "Website 3",
-        "imgUrl": "assets/nature-3.jpg",
-        "description": ["React", "CSS"]
+        "title": "Bennett Book",
+        "imgUrl": "assets/BennettBook.jpg",
+        "description": "Full Stack mobile app.  Used MongoDB for database storage, Express/Node.js for backend, React Native for frontend.",
+        "github": "https://github.com/bkautz0824/social-media-app"
     }
 
 ]

@@ -16,7 +16,7 @@ function Particle() {
 
     const optionsVar = {
         fullScreen: {
-            zIndex: -3,
+            zIndex: 0,
         },
         background: {
             color: {
@@ -63,7 +63,7 @@ function Particle() {
                     default: "bounce",
                 },
                 random: false,
-                speed: 2,
+                speed: 1,
                 straight: false,
             },
             number: {

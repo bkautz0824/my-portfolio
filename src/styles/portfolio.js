@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 
 export const PortfolioContainer = styled.div`
 width: 100%;
-height: 2800px;
+height: 5000px;
 text-align: center;
 display: flex;
 align-items: center;
 flex-direction: column;
-justify-content: space-evenly;
+/* justify-content: space-evenly; */
 background-color: black;
 /* z-index: 1; */
 `;
@@ -16,13 +16,15 @@ background-color: black;
 
 export const HeaderContainer = styled.div`
 width: 75%; 
-height: 20%;
+height: auto;
 align-items: center;
 flex-direction: column;
 display: flex;
-margin-top: 1rem;
-padding-top: 5rem;
-z-index: 0;
+margin-top: 5rem;
+/* padding-top: 5rem; */
+margin-bottom: 1rem;
+padding-bottom: 1rem;
+z-index: 1;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -39,12 +41,12 @@ p{
 export const ProjectContainer = styled(motion.div)`
 display: flex;
 /* width: 100%; */
-height: 1200px;
+height: auto;
 justify-content: space-between;
 align-items: center;
 background-image: linear-gradient(black, #2F4E2F
 , black);
-margin: 5rem 2rem;
+margin: 2rem 2rem 5rem 2rem;
 flex-direction: column;
 padding: 0 .5rem;
 /* z-index: 1; */
@@ -62,9 +64,9 @@ border-bottom: 2px solid silver;
 `
 
 
-export const ContactResumeContainer = styled(motion.div)`
-width: 70%;
-height: 600px;
+export const ContactContainer = styled(motion.div)`
+width: 20%;
+height: auto;
 justify-content: center;
 padding: 2rem 5rem;
 margin: .5rem;
@@ -72,18 +74,46 @@ background-color: aliceblue;
 z-index: 1;
 display: flex;
 flex-direction: column;
-`
 
-export const ContactContainer = styled.div`
+`
+export const ResumeContainer = styled(motion.div)`
 width: 50%;
-height: 50%;  
-
+height: auto;
+justify-content: center;
+padding: 2rem 2rem;
+margin: 2rem 0;
+background-color: aliceblue;
+z-index: 1;
+display: flex;
+flex-direction: column;
 `
 
-export const ResumeContainer = styled.div`
-width: 50%;
-height: 50%;
+export const BottomContainer1 = styled(motion.div)`
+height:auto;
+width: 90%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 `
+
+export const BottomContainer2 = styled(motion.div)`
+height: 1000px;
+width: 90%;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+`
+
+// export const ContactContainer = styled.div`
+// width: 50%;
+// height: 50%;  
+
+// `
+
+// export const ResumeContainer = styled.div`
+// width: 50%;
+// height: 50%;
+// `
 
 export const ProjectItem = styled.div`
 display: flex;
@@ -94,9 +124,11 @@ width:80%;
 `
 
 export const ProjectImage = styled(motion.img)`
-width: 400px;
+min-width: 400px;
+max-width: 500px;
 height: auto;
 padding: 1rem 5rem;
+max-height: 400px;
 `
 export const ProjectItemText = styled(motion.div)`
 width: 50%;
