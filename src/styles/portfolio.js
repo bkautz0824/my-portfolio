@@ -8,7 +8,7 @@ text-align: center;
 display: flex;
 align-items: center;
 flex-direction: column;
-/* justify-content: space-evenly; */
+justify-content: space-between;
 background-color: black;
 /* z-index: 1; */
 `;
@@ -98,7 +98,7 @@ height:auto;
 width: 90%;
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: center;
 `
 
 export const BottomContainer2 = styled(motion.div)`
@@ -106,7 +106,7 @@ height: 1000px;
 width: 90%;
 display: flex;
 flex-direction: column;
-align-items: flex-end;
+align-items: center;
 `
 
 // export const ContactContainer = styled.div`

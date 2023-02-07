@@ -46,6 +46,7 @@ const Header = () => {
 const Contact = () => {
   return (
     <ContactContainer
+      id="contact"
       initial={{ opacity:0}} 
       whileInView={{ opacity:1}}>
       
@@ -67,8 +68,8 @@ const Resume = () => {
     setIsClicked(!isClicked)
   }
   return(
-  <ResumeContainer>
-  {/* <h1>Resume</h1> */}
+  <ResumeContainer id="resume">
+  <h1>Resume</h1>
     <Button 
     onClick={toggleResume}
     variant="contained"
@@ -103,6 +104,7 @@ const Projects = () => {
 
   return (
     <ProjectContainer 
+      id="projects"
       initial={{ 
         opacity:0,
       //   // height: "500px",
@@ -197,12 +199,12 @@ const Portfolio = () => {
       {/* <Particle/> */}
       <NavBar />
       <Header />
-      <Projects />
+      <Projects id="projects"/>
       <BottomContainer1>
-        <Resume />
+        <Resume id="resume"/>
       </BottomContainer1>
       <BottomContainer2>
-        <Contact /> 
+        <Contact id="contact"/> 
       </BottomContainer2>
      
     </PortfolioContainer>

@@ -1,6 +1,6 @@
 [
-    {"name":"Projects", "href":"Projects", "id":1}, 
-    {"name":"Resume", "href":"", "id":2}, 
-    {"name":"Contact", "href":"", "id":3}
+    {"name":"Projects", "href":"#projects", "id":1}, 
+    {"name":"Resume", "href":"#resume", "id":2}, 
+    {"name":"Contact", "href":"#contact", "id":3}
     
 ]

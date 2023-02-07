@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { ThemeProvider, createTheme } from '@mui/material';
 import pages from '../data/pages.json';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const darkTheme = createTheme({
     palette: {
@@ -102,7 +103,12 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 
                 <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
+                  <Typography textAlign="center">
+                    {/* <Link to={page.href}> */}
+                       {page.name}
+                    {/* </Link> */}
+                   
+                    </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -121,19 +127,21 @@ function ResponsiveAppBar() {
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
-              textDecoration: 'none',
+              // textDecoration: 'none',
             }}
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'  } }}>
             {pages.map((page) => (
               <Button
                 key={page.id}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', textTransform:"none"}}
               >
-                {page.name}
+                {/* <Link  to={page.href}> */}
+                       {page.name}
+                {/* </Link> */}
               </Button>
             ))}
           </Box>
