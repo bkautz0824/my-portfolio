@@ -11,6 +11,9 @@ flex-direction: column;
 justify-content: space-between;
 background-color: black;
 /* z-index: 1; */
+/* @media screen and (min-width:320px) and (max-width:760px) {
+  width:100vw;
+} */
 `;
 
 
@@ -34,6 +37,9 @@ h1{
 p{
   font-size: 2rem;
   color:forestgreen;
+}
+@media screen and (min-width:320px) and (max-width:760px) {
+  width:80vw;
 }
 `
 
@@ -61,6 +67,10 @@ color: #90EE90;
 font-size: 3rem;
 border-bottom: 2px solid silver;
 }
+@media screen and (min-width:320px) and (max-width:760px){
+ width: 50%
+}
+
 `
 
 
@@ -126,6 +136,11 @@ flex-direction: row;
 justify-content: space-between;
 width:80%;
 height: 100vh;
+@media screen and (min-width:320px) and (max-width:760px){
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
 `
 
 export const ProjectImage = styled(motion.img)`
@@ -138,7 +153,10 @@ max-height: 400px;
 export const ProjectItemText = styled(motion.div)`
 width: auto;
 height: 100%;
-
+@media screen and (min-width:320px) and (max-width:760px){
+ width: 50%;
+ font-size: smaller;
+}
 `
 
 
