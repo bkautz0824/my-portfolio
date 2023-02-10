@@ -72,7 +72,7 @@ const frontEnd = [
     },
     {
         id: id++,
-        skill: "Styled Componenets"
+        skill: "Styled Components"
     },
 
 ]

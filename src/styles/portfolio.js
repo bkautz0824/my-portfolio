@@ -16,7 +16,7 @@ background-color: black;
 
 export const HeaderContainer = styled.div`
 width: 75%; 
-height: auto;
+height: 90vh;
 align-items: center;
 flex-direction: column;
 display: flex;
@@ -125,7 +125,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 width:80%;
-
+height: 100vh;
 `
 
 export const ProjectImage = styled(motion.img)`
@@ -138,6 +138,7 @@ max-height: 400px;
 export const ProjectItemText = styled(motion.div)`
 width: auto;
 height: 100%;
+
 `
 
 

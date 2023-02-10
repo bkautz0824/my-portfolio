@@ -97,8 +97,8 @@ const Projects = () => {
   const spring = {
     type: "spring",
     damping: 80,
-    duration: 1
-    // stiffness: 100
+    duration: 1,
+    stiffness: 100
   }  
 
 
@@ -166,7 +166,7 @@ const Projects = () => {
                 >{item.title}</motion.h1>
                 <p>{item.description}</p>
                 <SocialIcon url={item.github} whileHover={{scale: 1.2}}  />
-              </ProjectItemText>
+              </ProjectItemText >
             </ProjectItem>)
           })
           
