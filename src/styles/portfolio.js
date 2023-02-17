@@ -86,7 +86,7 @@ color: silver;
 z-index: 1;
 display: flex;
 flex-direction: column;
-
+border-radius: 2rem;
 `
 export const ResumeContainer = styled(motion.div)`
 width: 50%;
@@ -101,6 +101,7 @@ z-index: 1;
 display: flex;
 flex-direction: column;
 box-shadow: 2px;
+border-radius: 2rem;
 `
 
 export const BottomContainer1 = styled(motion.div)`

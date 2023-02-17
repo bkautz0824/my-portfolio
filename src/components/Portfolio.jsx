@@ -1,6 +1,5 @@
 import React from 'react';
 import portfolio from '../data/portfolio.json';
-import { Document, Page } from 'react-pdf';
 import { Button } from '@mui/material'
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion'

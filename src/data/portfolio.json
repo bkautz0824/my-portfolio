@@ -5,7 +5,7 @@
         "id": 1,
         "title": "Crypto Fees",
         "imgUrl": "assets/crypto-fees.jpg",
-        "description": "Learning about the archeitrure of a web 3 application and how it differs from traditonal web applications always captured my attention. This web page displays the 24 hour revenue of fees for each of the major cryptocurrency's.  This table displays the 24 hour fee in dollar amount, the logo, the name and the ticker of each coin.",
+        "description": "Learning about the architecture of a web 3 application and how it differs from traditonal web applications always captured my attention. This web page shows the 24 hour revenue of fees for each of the major cryptocurrency's.  This table displays the 24 hour fee in dollar amount, the logo, the name and the ticker of each coin.",
         "github": "https://github.com/bkautz0824/crypto-fees"
     },
     {  

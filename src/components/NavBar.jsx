@@ -15,15 +15,35 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { ThemeProvider, createTheme } from '@mui/material';
 import pages from '../data/pages.json';
 import { HashLink as Link } from 'react-router-hash-link';
+import styled from 'styled-components';
+
+
+const StyledLink  = styled(Link)`
+    text-decoration: none;
+    color: white;
+`;
 
 const darkTheme = createTheme({
     palette: {
+     
       mode: 'dark',
       primary: {
-        main: '#1976d2',
+        main: '#1e1e1e',
+      },
+      text: 
+      {
+        primary: "#ffffff",
       },
     },
-  });
+
+});
+
+const linkStyle = {
+  margin: "1rem",
+  textDecoration: "none"
+};
+
+
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -49,7 +69,7 @@ function ResponsiveAppBar() {
     <ThemeProvider theme={darkTheme}>
       
     
-    <AppBar position="sticky" sx={{zIndex: 2}} color="" enableColorOnDark>
+    <AppBar position="sticky" sx={{zIndex: 2,}} enableColorOnDark>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -71,7 +91,7 @@ function ResponsiveAppBar() {
             Bennett Kautz
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },  }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -98,19 +118,20 @@ function ResponsiveAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+                
               }}
             >
-              {pages.map((page) => (
+              {/* {pages.map((page) => (
                 
-                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    {/* <Link to={page.href}> */}
+                <MenuItem key={page.id} onClick={handleCloseNavMenu} >
+                  <Typography textAlign="center" >
+                    <StyledLink to={page.href} >
                        {page.name}
-                    {/* </Link> */}
+                    </StyledLink>
                    
                     </Typography>
                 </MenuItem>
-              ))}
+              ))} */}
             </Menu>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
@@ -137,11 +158,11 @@ function ResponsiveAppBar() {
               <Button
                 key={page.id}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', textTransform:"none"}}
+                sx={{ my: 2, display: 'block', textTransform:"none"}}
               >
-                {/* <Link  to={page.href}> */}
+                <StyledLink to={page.href} >
                        {page.name}
-                {/* </Link> */}
+                </StyledLink>
               </Button>
             ))}
           </Box>
@@ -170,7 +191,7 @@ function ResponsiveAppBar() {
             >
               {pages.map((setting) => (
                 <MenuItem key={setting.id} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting.name}</Typography>
+                  <StyledLink to={setting.href} textAlign="center">{setting.name}</StyledLink>
                 </MenuItem>
               ))}
             </Menu>
